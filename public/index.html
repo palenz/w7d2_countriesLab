@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/bundle.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <h1>Countries of the world!</h1>
+        </header>
+        <div v-if="country">The total population is: {{totalPopulation}}</div>
+        <select v-model="favCountry" v-if="country">
+            <option :value="currentCountry" v-for="(currentCountry, index) in country" >
+                {{currentCountry.name}}
+            </option>
+        </select >
+
+        
+    
+    </div>
+
+
+
+</body>
+</html>
